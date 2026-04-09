@@ -4,7 +4,7 @@ app = FastAPI()
 
 @app.get("/")
 def read_root():
-    return {"mensagem": "API funcionando!"}
+    return {"msg": "API funcionando!"}
 
 @app.get("/somar/{a}/{b}")
 def somar(a: int, b: int):
