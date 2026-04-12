@@ -1,3 +1,2 @@
-fastapi[standard]
-pytest
-httpx
+fastapi
+uvicorn
