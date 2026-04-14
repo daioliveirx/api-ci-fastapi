@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from pydantic import BaseModel
 
 app = FastAPI()
 
@@ -10,7 +11,9 @@ def read_root():
 def somar(a: int, b: int):
     return {"resultado": a + b}
 
-from pydantic import BaseModel
+@app.get("/multiplicar/{a}/{b}")
+def multiplicar(a: int, b: int):
+    return {"resultado": a * b}
 
 class Usuario(BaseModel):
     nome: str
