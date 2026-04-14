@@ -23,3 +23,7 @@ def test_criar_usuario():
         "mensagem": "Usuário criado com sucesso",
         "usuario": {"nome": "Ana", "idade": 25}
     }
+
+def test_multiplicar():
+    response = client.get("/multiplicar/2/2")
+    assert response.json()["resultado"] == 4
